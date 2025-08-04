@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website Workflow Guide</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --warning: #f39c12;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .feature-list li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .tech-item {
+            background: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .workflow-diagram {
+            width: 100%;
+            max-width: 800px;
+            margin: 2rem auto;
+            display: block;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce- Blogs</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #4d44db;
+            --dark-color: #2a2a72;
+            --light-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .blog-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .blog-card-body {
+            padding: 25px;
+        }
+        
+        .blog-card-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .blog-card-text {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .admin-blog {
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .user-blog {
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section {
+            background-color: var(--light-color);
+            padding: 4rem 0;
+            position: relative;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0;
+        }
+        
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Animation classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 3rem 0;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span style="color: var(--primary-color);">Your</span>Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <a href="#" class="btn btn-outline-primary">Admin Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title display-4 fw-bold mb-4 animate-on-scroll">Discover Our Story</h1>
+            <p class="lead mb-5 animate-on-scroll" style="animation-delay: 0.2s;">Explore the latest insights from our team and shopping tips for our customers</p>
+            <div class="animate-on-scroll" style="animation-delay: 0.4s;">
+                <a href="#admin-blogs" class="btn btn-light btn-lg me-2">For Business</a>
+                <a href="#user-blogs" class="btn btn-outline-light btn-lg">For Shoppers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Blogs Section -->
+    <section id="admin-blogs" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Behind The Scenes</h2>
+                <p class="text-muted">Insights for business owners and partners</p>
+            </div>
+            
+            <div class="row">
+                <!-- Admin Blog 1 -->
+                <div class="col-lg-4 animate-on-scroll">
+                    <div class="blog-card admin-blog h-100">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="blog-card-img" alt="Admin Dashboard">
+                        <div class="blog-card-body">
+                            <div class="mb-3">
+                                <span class="tag">Business</span>
+                                <span class="tag">Technology</span>
+                            </div>
+                            <h3 class="blog-card-title">Our Mission and Vision</h3>
+                            <p class="blog-card-text">Discover how we're building more than just an online store - we're creating a complete shopping ecosystem designed to serve millions.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Admin Blog 2 -->
+                <div class="col-lg-4 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="blog-card admin-blog h-100">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" class="blog-card-img" alt="Analytics">
+                        <div class="blog-card-body">
+                            <div class="mb-3">
+                                <span class="tag">Analytics</span>
+                                <span class="tag">Growth</span>
+                            </div>
+                            <h3 class="blog-card-title">Our Technology Stack</h3>
+                            <p class="blog-card-text">Learn about the powerful technologies driving our platform, from frontend frameworks to payment integrations and cloud hosting.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Admin Blog 3 -->
+                <div class="col-lg-4 animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="blog-card admin-blog h-100">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="blog-card-img" alt="Team">
+                        <div class="blog-card-body">
+                            <div class="mb-3">
+                                <span class="tag">Team</span>
+                                <span class="tag">Vision</span>
+                            </div>
+                            <h3 class="blog-card-title">Admin Features Overview</h3>
+                            <p class="blog-card-text">Explore the comprehensive admin dashboard that helps us manage products, orders, inventory, and customer relationships efficiently.</p>
+                            <a href="#" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 animate-on-scroll">
+                <a href="#" class="btn btn-primary btn-lg">View All Business Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 animate-on-scroll">
+                    <h2 class="fw-bold mb-4">Powerful Admin Features</h2>
+                    <p class="lead mb-5">Our admin dashboard provides everything you need to manage your eCommerce business efficiently.</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <h4>Inventory Management</h4>
+                            <p>Real-time stock tracking with automated alerts for low inventory.</p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Sales Analytics</h4>
+                            <p>Comprehensive dashboards to track revenue, conversions, and customer behavior.</p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h4>Order Fulfillment</h4>
+                            <p>Streamlined process from order placement to delivery tracking.</p>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="feature-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <h4>Customer Management</h4>
+                            <p>Detailed customer profiles with purchase history and preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="img-fluid rounded-3 shadow" alt="Admin Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Blogs Section -->
+    <section id="user-blogs" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Shopping Tips & Trends</h2>
+                <p class="text-muted">Helpful guides and inspiration for our valued customers</p>
+            </div>
+            
+            <div class="row">
+                <!-- User Blog 1 -->
+                <div class="col-lg-4 animate-on-scroll">
+                    <div class="blog-card user-blog h-100">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="blog-card-img" alt="Shopping">
+                        <div class="blog-card-body">
+                            <div class="mb-3">
+                                <span class="tag" style="background-color: var(--accent-color);">Shopping</span>
+                                <span class="tag" style="background-color: var(--accent-color);">Guide</span>
+                            </div>
+                            <h3 class="blog-card-title">Your Shopping Journey Begins Here</h3>
+                            <p class="blog-card-text">Discover how to make the most of our platform with this simple guide to browsing, purchasing, and tracking your orders.</p>
+                            <a href="#" class="btn btn-outline-danger">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- User Blog 2 -->
+                <div class="col-lg-4 animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="blog-card user-blog h-100">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="blog-card-img" alt="Fashion">
+                        <div class="blog-card-body">
+                            <div class="mb-3">
+                                <span class="tag" style="background-color: var(--accent-color);">Fashion</span>
+                                <span class="tag" style="background-color: var(--accent-color);">Trends</span>
+                            </div>
+                            <h3 class="blog-card-title">Seasonal Fashion Trends</h3>
+                            <p class="blog-card-text">Stay ahead of the curve with our curated selection of this season's must-have fashion items and styling tips.</p>
+                            <a href="#" class="btn btn-outline-danger">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- User Blog 3 -->
+                <div class="col-lg-4 animate-on-scroll" style="animation-delay: 0.4s;">
+                    <div class="blog-card user-blog h-100">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="blog-card-img" alt="Tech">
+                        <div class="blog-card-body">
+                            <div class="mb-3">
+                                <span class="tag" style="background-color: var(--accent-color);">Tech</span>
+                                <span class="tag" style="background-color: var(--accent-color);">Reviews</span>
+                            </div>
+                            <h3 class="blog-card-title">Gadget Buying Guide</h3>
+                            <p class="blog-card-text">Our expert recommendations for the best tech gadgets this year, with detailed comparisons to help you choose.</p>
+                            <a href="#" class="btn btn-outline-danger">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 animate-on-scroll">
+                <a href="#" class="btn btn-danger btn-lg">View All Shopping Articles</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4 animate-on-scroll">Ready to Start Shopping?</h2>
+            <p class="lead mb-5 animate-on-scroll" style="animation-delay: 0.2s;">Join thousands of happy customers enjoying seamless shopping experience</p>
+            <div class="animate-on-scroll" style="animation-delay: 0.4s;">
+                <a href="#" class="btn btn-primary btn-lg me-3">Shop Now</a>
+                <a href="#" class="btn btn-outline-primary btn-lg">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="fw-bold mb-4">YourStore</h3>
+                    <p>Your one-stop shop for all your needs. Quality products, exceptional service, and seamless shopping experience.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Shop</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Fashion</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Electronics</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home & Living</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Beauty</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Sports</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="fw-bold mb-4">Newsletter</h5>
+                    <p>Subscribe to get updates on new products and special offers</p>
+                    <form class="mt-4">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 YourStore. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">
+                        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                        <a href="#" class="text-white text-decoration-none">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Admin/User blog toggle for demo purposes
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('view') === 'admin') {
+                document.getElementById('user-blogs').style.display = 'none';
+                document.querySelector('.hero-title').textContent = 'Admin Resources';
+            } else if (urlParams.get('view') === 'user') {
+                document.getElementById('admin-blogs').style.display = 'none';
+                document.querySelector('.hero-title').textContent = 'Shopping Blog';
+            }
+        });
+    </script>
+</body>
+</html>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>E-Commerce Website Workflow</h1>
+            <p>A comprehensive guide to modern e-commerce architecture and user experience</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Introduction to E-Commerce Workflow</h2>
+            <p>Modern e-commerce websites combine sophisticated frontend interfaces with robust backend systems to create seamless shopping experiences. This guide breaks down each component of a typical e-commerce workflow, from user interaction to database operations.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="E-commerce Homepage">
+                    <div class="card-content">
+                        <h3>Frontend Components</h3>
+                        <ul class="feature-list">
+                            <li>Responsive product displays</li>
+                            <li>Interactive shopping cart</li>
+                            <li>User account dashboard</li>
+                            <li>Search and filtering</li>
+                            <li>Checkout process</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Admin Dashboard">
+                    <div class="card-content">
+                        <h3>Backend Systems</h3>
+                        <ul class="feature-list">
+                            <li>Order management</li>
+                            <li>Inventory control</li>
+                            <li>Customer data processing</li>
+                            <li>Payment processing</li>
+                            <li>Analytics and reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Core Components of E-Commerce Websites</h2>
+            
+            <h3>1. Landing Page & Homepage</h3>
+            <p>The digital storefront designed to showcase products, promotions, and brand identity while guiding users to conversion points.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-item">Hero Banners</span>
+                <span class="tech-item">Product Carousels</span>
+                <span class="tech-item">Navigation Menu</span>
+                <span class="tech-item">Search Functionality</span>
+                <span class="tech-item">Trust Signals</span>
+            </div>
+            
+            <h3>2. Product Catalog System</h3>
+            <p>The organized display of products with filtering and sorting capabilities to help users find what they need.</p>
+            <ul class="feature-list">
+                <li>Product categories and subcategories</li>
+                <li>Advanced filtering (price, size, color, etc.)</li>
+                <li>Search with autocomplete</li>
+                <li>Product comparison tools</li>
+                <li>Personalized recommendations</li>
+            </ul>
+            
+            <h3>3. User Accounts & Dashboard</h3>
+            <p>Personalized space where customers can manage their orders, preferences, and account details.</p>
+            <div class="grid">
+                <div>
+                    <h4>Key Features:</h4>
+                    <ul class="feature-list">
+                        <li>Order history tracking</li>
+                        <li>Wishlist management</li>
+                        <li>Saved payment methods</li>
+                        <li>Address book</li>
+                        <li>Loyalty program status</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Security:</h4>
+                    <ul class="feature-list">
+                        <li>Two-factor authentication</li>
+                        <li>Password recovery</li>
+                        <li>Login history</li>
+                        <li>Privacy controls</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>4. Shopping Cart & Checkout Process</h3>
+            <p>The conversion funnel where users complete their purchases with minimal friction.</p>
+            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Checkout Process" class="workflow-diagram">
+            
+            <h4>Checkout Steps:</h4>
+            <ol>
+                <li><strong>Cart Review:</strong> Verify items, quantities, and prices</li>
+                <li><strong>Shipping Information:</strong> Address and delivery options</li>
+                <li><strong>Payment Method:</strong> Secure payment processing</li>
+                <li><strong>Order Confirmation:</strong> Summary and receipt</li>
+            </ol>
+        </section>
+        
+        <section class="section">
+            <h2>Backend Architecture</h2>
+            
+            <h3>Database Structure</h3>
+            <p>The data foundation that powers all e-commerce operations.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Core Tables:</h4>
+                        <ul class="feature-list">
+                            <li>Users (customers, admins)</li>
+                            <li>Products (with variants)</li>
+                            <li>Orders (with line items)</li>
+                            <li>Inventory (stock levels)</li>
+                            <li>Payments (transactions)</li>
+                            <li>Reviews (product ratings)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Relationships:</h4>
+                        <ul class="feature-list">
+                            <li>One-to-many (user to orders)</li>
+                            <li>Many-to-many (products to categories)</li>
+                            <li>Order to product line items</li>
+                            <li>Inventory to product variants</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Admin Dashboard</h3>
+            <p>The control center for managing all aspects of the e-commerce operation.</p>
+            
+            <div class="grid">
+                <div>
+                    <h4>Management Areas:</h4>
+                    <ul class="feature-list">
+                        <li>Product catalog management</li>
+                        <li>Order processing (fulfillment, returns)</li>
+                        <li>Customer service tools</li>
+                        <li>Marketing campaign management</li>
+                        <li>Analytics and reporting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Advanced Features:</h4>
+                    <ul class="feature-list">
+                        <li>Inventory forecasting</li>
+                        <li>Automated restocking alerts</li>
+                        <li>AB testing framework</li>
+                        <li>API management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Implementation</h2>
+            
+            <h3>Frontend Technologies</h3>
+            <div class="tech-stack">
+                <span class="tech-item">React.js</span>
+                <span class="tech-item">Vue.js</span>
+                <span class="tech-item">Angular</span>
+                <span class="tech-item">HTML5/CSS3</span>
+                <span class="tech-item">JavaScript (ES6+)</span>
+                <span class="tech-item">Tailwind CSS</span>
+                <span class="tech-item">SASS/LESS</span>
+            </div>
+            
+            <h3>Backend Technologies</h3>
+            <div class="tech-stack">
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">Django</span>
+                <span class="tech-item">Ruby on Rails</span>
+                <span class="tech-item">Laravel</span>
+                <span class="tech-item">Spring Boot</span>
+                <span class="tech-item">.NET Core</span>
+            </div>
+            
+            <h3>Database Options</h3>
+            <div class="tech-stack">
+                <span class="tech-item">MySQL</span>
+                <span class="tech-item">PostgreSQL</span>
+                <span class="tech-item">MongoDB</span>
+                <span class="tech-item">Firebase</span>
+                <span class="tech-item">Redis (caching)</span>
+            </div>
+            
+            <h3>Payment Processors</h3>
+            <div class="tech-stack">
+                <span class="tech-item">Stripe</span>
+                <span class="tech-item">PayPal</span>
+                <span class="tech-item">Square</span>
+                <span class="tech-item">Braintree</span>
+                <span class="tech-item">Authorize.net</span>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Complete Workflow Diagram</h2>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="E-commerce Workflow Diagram" class="workflow-diagram">
+            
+            <h3>User Journey Steps:</h3>
+            <ol>
+                <li><strong>Discovery:</strong> User arrives via marketing channel (SEO, ads, social)</li>
+                <li><strong>Browse:</strong> Navigates through product catalog</li>
+                <li><strong>Selection:</strong> Adds items to cart</li>
+                <li><strong>Checkout:</strong> Completes purchase process</li>
+                <li><strong>Fulfillment:</strong> Order processed and shipped</li>
+                <li><strong>Post-purchase:</strong> Follow-up, reviews, and retention</li>
+            </ol>
+            
+            <h3>System Processes:</h3>
+            <ul class="feature-list">
+                <li>User authentication and session management</li>
+                <li>Product inventory checks</li>
+                <li>Payment authorization and capture</li>
+                <li>Order confirmation emails</li>
+                <li>Shipping integration</li>
+                <li>Data analytics collection</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 E-Commerce Workflow Guide | Professional UI Design</p>
+            <p>Note: Images are placeholder examples from Unsplash</p>
+        </div>
+    </footer>
+</body>
+</html>
