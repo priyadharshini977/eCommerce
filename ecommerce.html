@@ -157,6 +157,282 @@
         }
     </style>
 
+
+</head>
+<body>
+     <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span style="color: var(--primary-color);">Your</span>Store
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <a href="#" class="btn btn-outline-primary">Admin Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="hero-title display-4 fw-bold mb-4 animate-on-scroll">Discover Our Story</h1>
+            <p class="lead mb-5 animate-on-scroll" style="animation-delay: 0.2s;">Explore the latest insights from our team and shopping tips for our customers</p>
+            <div class="animate-on-scroll" style="animation-delay: 0.4s;">
+                <a href="#admin-blogs" class="btn btn-light btn-lg me-2">For Business</a>
+                <a href="#user-blogs" class="btn btn-outline-light btn-lg">For Shoppers</a>
+            </div>
+        </div>
+    </section>
+
+   
+        
+    <div class="container">
+        <section class="section">
+            <h2>Introduction to E-Commerce Workflow</h2>
+            <p>Modern e-commerce websites combine sophisticated frontend interfaces with robust backend systems to create seamless shopping experiences. This guide breaks down each component of a typical e-commerce workflow, from user interaction to database operations.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="E-commerce Homepage">
+                    <div class="card-content">
+                        <h3>Frontend Components</h3>
+                        <ul class="feature-list">
+                            <li>Responsive product displays</li>
+                            <li>Interactive shopping cart</li>
+                            <li>User account dashboard</li>
+                            <li>Search and filtering</li>
+                            <li>Checkout process</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Admin Dashboard">
+                    <div class="card-content">
+                        <h3>Backend Systems</h3>
+                        <ul class="feature-list">
+                            <li>Order management</li>
+                            <li>Inventory control</li>
+                            <li>Customer data processing</li>
+                            <li>Payment processing</li>
+                            <li>Analytics and reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Core Components of E-Commerce Websites</h2>
+            
+            <h3>1. Landing Page & Homepage</h3>
+            <p>The digital storefront designed to showcase products, promotions, and brand identity while guiding users to conversion points.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-item">Hero Banners</span>
+                <span class="tech-item">Product Carousels</span>
+                <span class="tech-item">Navigation Menu</span>
+                <span class="tech-item">Search Functionality</span>
+                <span class="tech-item">Trust Signals</span>
+            </div>
+            
+            <h3>2. Product Catalog System</h3>
+            <p>The organized display of products with filtering and sorting capabilities to help users find what they need.</p>
+            <ul class="feature-list">
+                <li>Product categories and subcategories</li>
+                <li>Advanced filtering (price, size, color, etc.)</li>
+                <li>Search with autocomplete</li>
+                <li>Product comparison tools</li>
+                <li>Personalized recommendations</li>
+            </ul>
+            
+            <h3>3. User Accounts & Dashboard</h3>
+            <p>Personalized space where customers can manage their orders, preferences, and account details.</p>
+            <div class="grid">
+                <div>
+                    <h4>Key Features:</h4>
+                    <ul class="feature-list">
+                        <li>Order history tracking</li>
+                        <li>Wishlist management</li>
+                        <li>Saved payment methods</li>
+                        <li>Address book</li>
+                        <li>Loyalty program status</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Security:</h4>
+                    <ul class="feature-list">
+                        <li>Two-factor authentication</li>
+                        <li>Password recovery</li>
+                        <li>Login history</li>
+                        <li>Privacy controls</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3>4. Shopping Cart & Checkout Process</h3>
+            <p>The conversion funnel where users complete their purchases with minimal friction.</p>
+            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Checkout Process" class="workflow-diagram">
+            
+            <h4>Checkout Steps:</h4>
+            <ol>
+                <li><strong>Cart Review:</strong> Verify items, quantities, and prices</li>
+                <li><strong>Shipping Information:</strong> Address and delivery options</li>
+                <li><strong>Payment Method:</strong> Secure payment processing</li>
+                <li><strong>Order Confirmation:</strong> Summary and receipt</li>
+            </ol>
+        </section>
+        
+        <section class="section">
+            <h2>Backend Architecture</h2>
+            
+            <h3>Database Structure</h3>
+            <p>The data foundation that powers all e-commerce operations.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Core Tables:</h4>
+                        <ul class="feature-list">
+                            <li>Users (customers, admins)</li>
+                            <li>Products (with variants)</li>
+                            <li>Orders (with line items)</li>
+                            <li>Inventory (stock levels)</li>
+                            <li>Payments (transactions)</li>
+                            <li>Reviews (product ratings)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h4>Relationships:</h4>
+                        <ul class="feature-list">
+                            <li>One-to-many (user to orders)</li>
+                            <li>Many-to-many (products to categories)</li>
+                            <li>Order to product line items</li>
+                            <li>Inventory to product variants</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Admin Dashboard</h3>
+            <p>The control center for managing all aspects of the e-commerce operation.</p>
+            
+            <div class="grid">
+                <div>
+                    <h4>Management Areas:</h4>
+                    <ul class="feature-list">
+                        <li>Product catalog management</li>
+                        <li>Order processing (fulfillment, returns)</li>
+                        <li>Customer service tools</li>
+                        <li>Marketing campaign management</li>
+                        <li>Analytics and reporting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Advanced Features:</h4>
+                    <ul class="feature-list">
+                        <li>Inventory forecasting</li>
+                        <li>Automated restocking alerts</li>
+                        <li>AB testing framework</li>
+                        <li>API management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Technical Implementation</h2>
+            
+            <h3>Frontend Technologies</h3>
+            <div class="tech-stack">
+                <span class="tech-item">React.js</span>
+                <span class="tech-item">Vue.js</span>
+                <span class="tech-item">Angular</span>
+                <span class="tech-item">HTML5/CSS3</span>
+                <span class="tech-item">JavaScript (ES6+)</span>
+                <span class="tech-item">Tailwind CSS</span>
+                <span class="tech-item">SASS/LESS</span>
+            </div>
+            
+            <h3>Backend Technologies</h3>
+            <div class="tech-stack">
+                <span class="tech-item">Node.js</span>
+                <span class="tech-item">Django</span>
+                <span class="tech-item">Ruby on Rails</span>
+                <span class="tech-item">Laravel</span>
+                <span class="tech-item">Spring Boot</span>
+                <span class="tech-item">.NET Core</span>
+            </div>
+            
+            <h3>Database Options</h3>
+            <div class="tech-stack">
+                <span class="tech-item">MySQL</span>
+                <span class="tech-item">PostgreSQL</span>
+                <span class="tech-item">MongoDB</span>
+                <span class="tech-item">Firebase</span>
+                <span class="tech-item">Redis (caching)</span>
+            </div>
+            
+            <h3>Payment Processors</h3>
+            <div class="tech-stack">
+                <span class="tech-item">Stripe</span>
+                <span class="tech-item">PayPal</span>
+                <span class="tech-item">Square</span>
+                <span class="tech-item">Braintree</span>
+                <span class="tech-item">Authorize.net</span>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Complete Workflow Diagram</h2>
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="E-commerce Workflow Diagram" class="workflow-diagram">
+            
+            <h3>User Journey Steps:</h3>
+            <ol>
+                <li><strong>Discovery:</strong> User arrives via marketing channel (SEO, ads, social)</li>
+                <li><strong>Browse:</strong> Navigates through product catalog</li>
+                <li><strong>Selection:</strong> Adds items to cart</li>
+                <li><strong>Checkout:</strong> Completes purchase process</li>
+                <li><strong>Fulfillment:</strong> Order processed and shipped</li>
+                <li><strong>Post-purchase:</strong> Follow-up, reviews, and retention</li>
+            </ol>
+            
+            <h3>System Processes:</h3>
+            <ul class="feature-list">
+                <li>User authentication and session management</li>
+                <li>Product inventory checks</li>
+                <li>Payment authorization and capture</li>
+                <li>Order confirmation emails</li>
+                <li>Shipping integration</li>
+                <li>Data analytics collection</li>
+            </ul>
+        </section>
+    </div>
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -316,52 +592,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <span style="color: var(--primary-color);">Your</span>Store
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                <div class="ms-3">
-                    <a href="#" class="btn btn-outline-primary">Admin Login</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container text-center">
-            <h1 class="hero-title display-4 fw-bold mb-4 animate-on-scroll">Discover Our Story</h1>
-            <p class="lead mb-5 animate-on-scroll" style="animation-delay: 0.2s;">Explore the latest insights from our team and shopping tips for our customers</p>
-            <div class="animate-on-scroll" style="animation-delay: 0.4s;">
-                <a href="#admin-blogs" class="btn btn-light btn-lg me-2">For Business</a>
-                <a href="#user-blogs" class="btn btn-outline-light btn-lg">For Shoppers</a>
-            </div>
-        </div>
-    </section>
-
     <!-- Admin Blogs Section -->
     <section id="admin-blogs" class="py-5 bg-light">
         <div class="container">
@@ -643,246 +873,5 @@
     </script>
 </body>
 </html>
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>E-Commerce Website Workflow</h1>
-            <p>A comprehensive guide to modern e-commerce architecture and user experience</p>
-        </div>
-    </header>
-    
-    <div class="container">
-        <section class="section">
-            <h2>Introduction to E-Commerce Workflow</h2>
-            <p>Modern e-commerce websites combine sophisticated frontend interfaces with robust backend systems to create seamless shopping experiences. This guide breaks down each component of a typical e-commerce workflow, from user interaction to database operations.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="E-commerce Homepage">
-                    <div class="card-content">
-                        <h3>Frontend Components</h3>
-                        <ul class="feature-list">
-                            <li>Responsive product displays</li>
-                            <li>Interactive shopping cart</li>
-                            <li>User account dashboard</li>
-                            <li>Search and filtering</li>
-                            <li>Checkout process</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Admin Dashboard">
-                    <div class="card-content">
-                        <h3>Backend Systems</h3>
-                        <ul class="feature-list">
-                            <li>Order management</li>
-                            <li>Inventory control</li>
-                            <li>Customer data processing</li>
-                            <li>Payment processing</li>
-                            <li>Analytics and reporting</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Core Components of E-Commerce Websites</h2>
-            
-            <h3>1. Landing Page & Homepage</h3>
-            <p>The digital storefront designed to showcase products, promotions, and brand identity while guiding users to conversion points.</p>
-            
-            <div class="tech-stack">
-                <span class="tech-item">Hero Banners</span>
-                <span class="tech-item">Product Carousels</span>
-                <span class="tech-item">Navigation Menu</span>
-                <span class="tech-item">Search Functionality</span>
-                <span class="tech-item">Trust Signals</span>
-            </div>
-            
-            <h3>2. Product Catalog System</h3>
-            <p>The organized display of products with filtering and sorting capabilities to help users find what they need.</p>
-            <ul class="feature-list">
-                <li>Product categories and subcategories</li>
-                <li>Advanced filtering (price, size, color, etc.)</li>
-                <li>Search with autocomplete</li>
-                <li>Product comparison tools</li>
-                <li>Personalized recommendations</li>
-            </ul>
-            
-            <h3>3. User Accounts & Dashboard</h3>
-            <p>Personalized space where customers can manage their orders, preferences, and account details.</p>
-            <div class="grid">
-                <div>
-                    <h4>Key Features:</h4>
-                    <ul class="feature-list">
-                        <li>Order history tracking</li>
-                        <li>Wishlist management</li>
-                        <li>Saved payment methods</li>
-                        <li>Address book</li>
-                        <li>Loyalty program status</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Security:</h4>
-                    <ul class="feature-list">
-                        <li>Two-factor authentication</li>
-                        <li>Password recovery</li>
-                        <li>Login history</li>
-                        <li>Privacy controls</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h3>4. Shopping Cart & Checkout Process</h3>
-            <p>The conversion funnel where users complete their purchases with minimal friction.</p>
-            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Checkout Process" class="workflow-diagram">
-            
-            <h4>Checkout Steps:</h4>
-            <ol>
-                <li><strong>Cart Review:</strong> Verify items, quantities, and prices</li>
-                <li><strong>Shipping Information:</strong> Address and delivery options</li>
-                <li><strong>Payment Method:</strong> Secure payment processing</li>
-                <li><strong>Order Confirmation:</strong> Summary and receipt</li>
-            </ol>
-        </section>
-        
-        <section class="section">
-            <h2>Backend Architecture</h2>
-            
-            <h3>Database Structure</h3>
-            <p>The data foundation that powers all e-commerce operations.</p>
-            
-            <div class="grid">
-                <div class="card">
-                    <div class="card-content">
-                        <h4>Core Tables:</h4>
-                        <ul class="feature-list">
-                            <li>Users (customers, admins)</li>
-                            <li>Products (with variants)</li>
-                            <li>Orders (with line items)</li>
-                            <li>Inventory (stock levels)</li>
-                            <li>Payments (transactions)</li>
-                            <li>Reviews (product ratings)</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-content">
-                        <h4>Relationships:</h4>
-                        <ul class="feature-list">
-                            <li>One-to-many (user to orders)</li>
-                            <li>Many-to-many (products to categories)</li>
-                            <li>Order to product line items</li>
-                            <li>Inventory to product variants</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <h3>Admin Dashboard</h3>
-            <p>The control center for managing all aspects of the e-commerce operation.</p>
-            
-            <div class="grid">
-                <div>
-                    <h4>Management Areas:</h4>
-                    <ul class="feature-list">
-                        <li>Product catalog management</li>
-                        <li>Order processing (fulfillment, returns)</li>
-                        <li>Customer service tools</li>
-                        <li>Marketing campaign management</li>
-                        <li>Analytics and reporting</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Advanced Features:</h4>
-                    <ul class="feature-list">
-                        <li>Inventory forecasting</li>
-                        <li>Automated restocking alerts</li>
-                        <li>AB testing framework</li>
-                        <li>API management</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Technical Implementation</h2>
-            
-            <h3>Frontend Technologies</h3>
-            <div class="tech-stack">
-                <span class="tech-item">React.js</span>
-                <span class="tech-item">Vue.js</span>
-                <span class="tech-item">Angular</span>
-                <span class="tech-item">HTML5/CSS3</span>
-                <span class="tech-item">JavaScript (ES6+)</span>
-                <span class="tech-item">Tailwind CSS</span>
-                <span class="tech-item">SASS/LESS</span>
-            </div>
-            
-            <h3>Backend Technologies</h3>
-            <div class="tech-stack">
-                <span class="tech-item">Node.js</span>
-                <span class="tech-item">Django</span>
-                <span class="tech-item">Ruby on Rails</span>
-                <span class="tech-item">Laravel</span>
-                <span class="tech-item">Spring Boot</span>
-                <span class="tech-item">.NET Core</span>
-            </div>
-            
-            <h3>Database Options</h3>
-            <div class="tech-stack">
-                <span class="tech-item">MySQL</span>
-                <span class="tech-item">PostgreSQL</span>
-                <span class="tech-item">MongoDB</span>
-                <span class="tech-item">Firebase</span>
-                <span class="tech-item">Redis (caching)</span>
-            </div>
-            
-            <h3>Payment Processors</h3>
-            <div class="tech-stack">
-                <span class="tech-item">Stripe</span>
-                <span class="tech-item">PayPal</span>
-                <span class="tech-item">Square</span>
-                <span class="tech-item">Braintree</span>
-                <span class="tech-item">Authorize.net</span>
-            </div>
-        </section>
-        
-        <section class="section">
-            <h2>Complete Workflow Diagram</h2>
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="E-commerce Workflow Diagram" class="workflow-diagram">
-            
-            <h3>User Journey Steps:</h3>
-            <ol>
-                <li><strong>Discovery:</strong> User arrives via marketing channel (SEO, ads, social)</li>
-                <li><strong>Browse:</strong> Navigates through product catalog</li>
-                <li><strong>Selection:</strong> Adds items to cart</li>
-                <li><strong>Checkout:</strong> Completes purchase process</li>
-                <li><strong>Fulfillment:</strong> Order processed and shipped</li>
-                <li><strong>Post-purchase:</strong> Follow-up, reviews, and retention</li>
-            </ol>
-            
-            <h3>System Processes:</h3>
-            <ul class="feature-list">
-                <li>User authentication and session management</li>
-                <li>Product inventory checks</li>
-                <li>Payment authorization and capture</li>
-                <li>Order confirmation emails</li>
-                <li>Shipping integration</li>
-                <li>Data analytics collection</li>
-            </ul>
-        </section>
-    </div>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 E-Commerce Workflow Guide | Professional UI Design</p>
-            <p>Note: Images are placeholder examples from Unsplash</p>
-        </div>
-    </footer>
 </body>
 </html>
